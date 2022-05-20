@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'watery'; /*a name to be used later*/
-    src: url('/static/assets/watery.TTF'); /*URL to font*/
+    src: url('/static/assets/watery.ttf'); /*URL to font*/
 } 
 
 body {

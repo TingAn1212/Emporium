@@ -1,0 +1,23 @@
+{% extends "topbar.html" %}
+{% block head %}Login{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <script src="/static/script/login.js"></script>
+    <div id="container">
+        <h1 id="title">EMPORIUM</h1>
+        <form action="{{url_for('index')}}" method="POST">
+            <input class="field" id="username" type="text" placeholder="Username:"><br>
+            <input class="field" id="password" type="password" placeholder="Password:"><br><br>
+            <div style="width:60%; margin-left: 20%; display:flex;">
+                <input id="submit_button" type="button" value="Login" onclick="login()">
+                <a id="register" href="{{url_for('register')}}">Register?</a>
+            </div>
+        </form>
+        <p id="hint"></p>
+    </div>
+</body>
+{% endblock %}

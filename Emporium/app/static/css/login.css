@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'watery'; /*a name to be used later*/
-    src: url('/static/assets/watery.TTF'); /*URL to font*/
+    src: url('/static/assets/watery.ttf'); /*URL to font*/
 } 
 
 body {
@@ -35,7 +35,7 @@ body {
 }
 
 #register{
-    margin-left: 5%;
+    margin-left: 4%;
     color: white;
 }
 

@@ -1,0 +1,49 @@
+{% extends "topbar.html" %}
+{% block head %}My Survey{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="/static/css/my_survey.css">
+</head>
+<body>
+    <script src="/static/script/my_survey.js"></script>
+    <div id="button_holder">
+        <button class="selector_button" id="left" onclick="change(0)">Posted Surveys</button>
+        <button class="selector_button" id="right" onclick="change(1)">New Survey</button>
+    </div>
+    <div id="popup_bg" onclick="popdown()"></div>
+    <div id="popup_box">
+        <p id="popup_title">PLACEHOLDER</p>
+        <p id="popup_date">Placeholder</p>
+        <p id="popup_response">Placeholder</p>
+        <iframe id="popup_preview" src="{{url_for('loading')}}"></iframe>
+        <p id="popup_desc">Placeholder</p><br>
+        <button id="copy_button" onclick="copy()">Copy Link</button>
+    </div>
+    <div id="survey_holder">
+        {% for survey in surveys %}
+        <span class="survey">
+            <label class="survey_description" onclick="popup('{{survey[2].upper()}}','{{survey[6]}}','{{survey[4]}}','{{survey[8]|string}}','{{survey[1]}}','{{survey[0]}}')" ><span>{{survey[2].upper()}}</span></label>
+        </span>
+        {% endfor %}
+    </div>
+    <div id="new_holder">
+        <h1 id="title">CREATE A NEW SURVEY</h1>
+        <form id="upload_survey">
+            <div class="inp_container">
+                <label>Title: </label>
+                <input id="new_title" class="inp_item" type="text">
+            </div>
+            <div class="inp_container">
+                <label>Description: </label>
+                <input id="new_desc" class="inp_item" type="text">
+            </div>
+            <div class="inp_container">
+                <label>Link: </label>
+                <input id="new_link" class="inp_item" type="text">
+            </div>
+        </form>
+        <br><button id="submit_button" class="selector_button" onclick="upload();">UPLOAD</button>
+    </div>
+</body>
+{% endblock %}

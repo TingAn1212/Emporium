@@ -1,0 +1,40 @@
+{% extends "topbar.html" %}
+{% block head %}Profile{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+<body>
+    <script src="/static/script/profile.js"></script>
+    <div id="container">
+        <h1 id="title">EMPORIUM</h1>
+        <table id="data_table">
+            <tr>
+                <th class="data" id="left">Username: </th>
+                <td class="data" id="right">{{userid}}</td>
+            </tr>
+            <tr>
+                <th class="data" id="left">Password: </th>
+                <td class="data" id="right"><button onclick="go('/change')">Change Password</button></td>
+            </tr>
+            <tr>
+                <th class="data" id="left">Points: </th>
+                <td class="data" id="right">{{point}}</td>
+            </tr>
+            <tr>
+                <th class="data" id="left">Survey done: </th>
+                <td class="data" id="right">{{survey_done}}</td>
+            </tr>
+            <tr>
+                <th class="data" id="left">Survey posted:</th>
+                <td class="data" id="right">{{survey_posted}}</td>
+            </tr>
+            <tr>
+                <th class="data" id="left">Registered since: </th>
+                <td class="data" id="right">{{age}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+{% endblock %}

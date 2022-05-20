@@ -27,6 +27,7 @@ function switch_mode(){
 
 function seen(nid){
     document.getElementById("N"+nid).style.display = "none";
+    $("#N"+nid).removeClass("N0").addClass("N1");
     fetch("/fetch",{
         headers: {
             'Content-Type': 'application/json',

@@ -8,6 +8,30 @@ body {
     padding-top:50px;
 }
 
+#button_holder{
+    display: flex;
+    width: 80%;
+    height: 36px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 10%;
+}
+
+.selector_button{
+    cursor: pointer;
+    border: solid black 3px;
+    border-radius: 5px;
+    color:white;
+    background-color: #406e8e;
+    height: 30px;
+    width: 40%;
+}
+
+#left{
+    margin-left: 10%;
+    background: #305976;
+}
+
 .survey {
     display:flex; 
     width: 100%;
@@ -26,19 +50,6 @@ body {
     color: #406eae;
     font-family: 'watery';
     font-size: larger;
-}
-
-.report_box{
-    align-self: center;
-    overflow: hidden;
-    padding-top: 0%;
-    margin-left: auto;
-    width: 80px;
-}
-
-.report_flag{
-    display:inline;
-    width: 90%;
 }
 
 #popup_bg{
@@ -103,23 +114,65 @@ body {
     color: lightgrey; 
     margin-top: 5px; 
     margin-bottom: 0px;
+    overflow-wrap: break-word;
+}
+
+#copy_button{
+    cursor: pointer;
+    border: solid black 3px;
+    border-radius: 5px;
+    color:white;
+    background-color: #406e8e;
+    height: 30px;
+    width: 30%;
+    margin-left: 35%;
+}
+
+#new_holder{
+    display: none;
+}
+
+form{
+    width: 40%;
+    margin-left: 30%;
+}
+
+#title{
+    font-family: watery;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.inp_item{
+    width: 50%;
+}
+
+label{
+    color: white;
+}
+
+#submit_button{
+    width: 40% !important;
+    margin-left: 30%;
+}
+
+.inp_container{
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.selector_button:hover {
+    background: #305976 !important;
 }
 
 .survey:hover {
     background: #9e9b9b;
 }
 
-#go_button {
-    width: 60%;
-    height: 30px;
-    padding-top: 3px;
-    margin-left: 20%;
-}
-
-#title {
-    font-family: watery;
-    color: white;
-    font-size: 60px;
-    text-align: center;
-    margin-bottom: 2%;
+#copy_button:hover {
+    background: #305976;
 }

@@ -4,13 +4,13 @@ var survey_id = -1;
     function reset_counter(){
         reload = -1;
     }
-    function popup(title,desc,author,response,link,id_in){
+    function popup(title,desc,date,response,link,id_in){
         id = id_in;
         document.getElementById("popup_bg").style.display = "flex";
         document.getElementById("popup_box").style.display = "initial";
         document.getElementById("popup_title").innerHTML = title;
         document.getElementById("popup_desc").innerHTML = desc;
-        document.getElementById("popup_author").innerHTML = "By: "+author;
+        document.getElementById("popup_date").innerHTML = "Posted on: "+date;
         document.getElementById("popup_response").innerHTML = "Responded: "+response;
         document.getElementById("popup_preview").src = link;
         reset_counter();
