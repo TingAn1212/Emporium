@@ -28,6 +28,7 @@ function switch_mode(){
 function seen(nid){
     document.getElementById("N"+nid).style.display = "none";
     $("#N"+nid).removeClass("N0").addClass("N1");
+    $("#N"+nid).removeAttr("onclick");
     fetch("/fetch",{
         headers: {
             'Content-Type': 'application/json',

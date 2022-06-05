@@ -36,7 +36,7 @@
             </div>
             <div class="inp_container">
                 <label>Description: </label>
-                <input id="new_desc" class="inp_item" type="text">
+                <textarea id="new_desc" class="inp_item" style="resize:vertical"></textarea>
             </div>
             <div class="inp_container">
                 <label>Link: </label>
@@ -44,6 +44,25 @@
             </div>
         </form>
         <br><button id="submit_button" class="selector_button" onclick="upload();">UPLOAD</button>
+        <br>
+        <div class="hint_holder" id="warning">
+            <img class="warn_img" src="/static/assets/warning.png">
+            <label class="hint" id="warning_content"></label>
+        </div>
+        <div class="hint_holder">
+            <img class="warn_img" src="/static/assets/warning.png">
+            <label class="hint">Surveys with multiple pages can be expoited!</label>
+        </div>
+        <div class="hint_holder">
+            <img class="warn_img" src="/static/assets/warning.png">
+            <label class="hint">Some character like ' is banned as it cause bugs(working on it)</label>
+        </div>
+        <div class="hint_holder">
+            <img class="warn_img" src="/static/assets/warning.png">
+            <label class="hint">You can check the preview before uploading!</label>
+        </div>
+        <iframe id="preview" src="{{url_for('loading')}}"></iframe>
+        <button class="selector_button" onclick="refresh()" style="margin-left: 30%;">Refresh preview</button>
     </div>
 </body>
 {% endblock %}

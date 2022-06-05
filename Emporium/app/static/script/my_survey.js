@@ -34,9 +34,52 @@
     function copy(){
         navigator.clipboard.writeText('https://emporium-neon.vercel.app/view?survey_id='+id);
     }
-    function upload(){
-        let title = $("#new_title").val();
-        let desc = $("#new_desc").val();
-        let link = $("#new_link").val();
+    function check(src){
+        if (src.length > 17){
+            if (src.substring(0,34) == "https://docs.google.com/forms/d/e/"){
+                return true;
+            }else if (src.substring(0,17) == "https://forms.gle"){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+    function refresh(){
+        let new_src = $("#new_link").val();
+        $("#preview").attr("src",new_src);
+    }
+}
+function replace_all(source,check,neww){
+    while (source.search(check) > -1){
+        source = source.replace(check,neww);
+    }
+    return source;
+}
+
+async function upload(){
+    let t = replace_all($("#new_title").val(),"'",'"');
+    let d = replace_all($("#new_desc").val(),"'",'"');
+    let link = $("#new_link").val();
+    if (check(link)){
+        let response = await fetch("/fetch",{
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: "POST",
+            body: JSON.stringify({action:"create_survey",title:t,desc:d,src:link,author:localStorage.getItem("username")})});
+        let content = await response.json();
+        if (content.state == "true"){
+            window.alert(content.reply);
+            location.reload(); 
+        }else{
+            $("#warning_content").html(content.reply);
+            $("#warning").css("display","flex");
+        }
+    }else{
+        $("#warning_content").html("Invalid link")
+        $("#warning").css("display","flex");
     }
 }

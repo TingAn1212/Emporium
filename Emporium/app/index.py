@@ -237,6 +237,17 @@ def points():
             with database.cursor() as connection:
                 change_password(connection,data["username"],data["opassword"],data["npassword"])
                 return "200"
+        if action == "create_survey":
+            try:
+                with database.cursor() as connection:
+                    connection.execute("INSERT INTO Survey (SurveyLink,SurveyName,AuthorID,Dates,Info) VALUES (%s,%s,%s,%s,%s)",(data["src"],data["title"],name_to_id(connection,data["author"]),get_date(),data["desc"]))
+                    add_notification(connection,"Your survey has been uploaded",name_to_id(connection,data["author"]))
+                    database.commit()
+                    return dumps({"reply":"Successful","state":"true"})
+            except Exception as e:
+                print(e)
+                return dumps({"reply":str(e),"state":"false"})
+
 
 #code
 if __name__ == "__main__":
