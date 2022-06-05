@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'watery'; /*a name to be used later*/
+    src: url('/static/assets/watery.ttf'); /*URL to font*/
+} 
+
+body {
+    background-color:#164e9e;
+    padding-top:50px;
+}
+
+.survey {
+    display:flex; 
+    width: 100%;
+    background-color: lightgrey; 
+    margin-top: 0.5%;
+    border-radius: 5px;
+    border: solid black 2px;}
+
+.survey_description{
+    cursor: pointer;
+    height: auto;
+    padding: 2%;
+    width: 93%;
+    display: inline-block;
+    text-decoration: none; 
+    color: #406eae;
+    font-family: 'watery';
+    font-size: larger;
+}
+
+.report_box{
+    align-self: center;
+    overflow: hidden;
+    padding-top: 0%;
+    margin-left: auto;
+    width: 80px;
+}
+
+.report_flag{
+    display:inline;
+    width: 90%;
+}
+
+#popup_bg{
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    background-color: blue;
+    opacity: 0.2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#popup_box{
+    overflow-x:hidden;
+    overflow-y:auto;
+    display: none;
+    position: fixed;
+    background-color: #23395b;
+    border: solid black 3px;
+    width: 80%;
+    height: 84%;
+    left: 10%;
+    top: 8%;
+}
+
+#popup_title{
+    text-align: center; 
+    font-size: xx-large;
+    font-weight:bolder; 
+    font-family: watery; 
+    color: lightgrey; 
+    margin-bottom: 5px;
+}
+
+#popup_date{
+    text-align: center; 
+    font-size: large; 
+    color: lightgrey; 
+    margin-top: 5px; 
+    margin-bottom: 0px;
+}
+
+#popup_response{
+    text-align: center; 
+    font-size: large; 
+    color: lightgrey; 
+    margin-top: 5px; 
+    margin-bottom: 0px;
+}
+
+#popup_preview{
+    height: 100%; 
+    width: 80%; 
+    margin-left:10%;
+}
+
+#popup_desc{
+    text-align: center; 
+    font-size: large; 
+    color: lightgrey; 
+    margin-top: 5px; 
+    margin-bottom: 0px;
+}
+
+.survey:hover {
+    background: #9e9b9b;
+}
+
+#go_button {
+    width: 60%;
+    height: 30px;
+    padding-top: 3px;
+    margin-left: 20%;
+}
+
+#title {
+    font-family: watery;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 2%;
+}

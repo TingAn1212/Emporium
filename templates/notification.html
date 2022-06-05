@@ -1,0 +1,20 @@
+{% extends "topbar.html" %}
+{% block head %}Notification{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="/static/css/notification.css">
+</head>
+<body >
+    <script src="/static/script/notification.js"></script>
+    <button id="switch" onclick="switch_mode()">UNREAD</button>
+    <span id="Notifications">
+        {% for noti in unseen %}
+            <label class="N{{noti[3]}}" id="N{{noti[0]}}" onclick="seen('{{noti[0]}}')"><span>{{noti[1].upper()}}</span></label>
+        {% endfor %}
+        {% for noti in seen %}
+            <label class="N{{noti[3]}}" id="N{{noti[0]}}"><span>{{noti[1].upper()}}</span></label>
+        {% endfor %}
+    </span>
+</body>
+{% endblock %}
