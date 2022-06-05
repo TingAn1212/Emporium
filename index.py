@@ -74,7 +74,7 @@ def add_notification(connection,content,targetID):
 def update_db():
     database.commit()
 
-@app.route("testing")
+@app.route("/testing")
 def testing():
     return "Hello World"
 
