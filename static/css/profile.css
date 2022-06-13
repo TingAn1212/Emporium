@@ -10,23 +10,22 @@ body {
 #container {
     border: dotted lightgrey 3px;
     display: block;
-    width: 60%;
+    width: 80%;
     height: auto;
     margin-top: 7%;
-    margin-left: 20%
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom, #164e9e, #164f9e00);
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 #title{
     font-family: watery;
     color: white;
-    font-size: 60px;
+    font-size: calc(3vw + 30px);
     text-align: center;
     margin-bottom: 2%;
-}
-
-#data_table{
-    background-color: #164e9e;
-    border-collapse: collapse;
 }
 
 #left {
@@ -40,15 +39,24 @@ body {
 
 }
 .data{
-    background-color: #164e9e;
     color: white;
     text-align: center;
-    width:10%;
-    font-size: 40px;
+    width:50%;
+    font-size: calc(3vw + 10px);
 }
 
 button {
     display: inline-block;
-    width: 50%;
+    width: 75%;
     height: 50px;
+}
+
+.sep {
+    background-color: #DDDDDD;
+    height: 2px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

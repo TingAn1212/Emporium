@@ -9,32 +9,35 @@
     <script src="/static/script/profile.js"></script>
     <div id="container">
         <h1 id="title">EMPORIUM</h1>
-        <table id="data_table">
-            <tr>
-                <th class="data" id="left">Username: </th>
-                <td class="data" id="right">{{userid}}</td>
-            </tr>
-            <tr>
-                <th class="data" id="left">Password: </th>
-                <td class="data" id="right"><button onclick="go('/change')">Change Password</button></td>
-            </tr>
-            <tr>
-                <th class="data" id="left">Points: </th>
-                <td class="data" id="right">{{point}}</td>
-            </tr>
-            <tr>
-                <th class="data" id="left">Survey done: </th>
-                <td class="data" id="right">{{survey_done}}</td>
-            </tr>
-            <tr>
-                <th class="data" id="left">Survey posted:</th>
-                <td class="data" id="right">{{survey_posted}}</td>
-            </tr>
-            <tr>
-                <th class="data" id="left">Registered since: </th>
-                <td class="data" id="right">{{age}}</td>
-            </tr>
-        </table>
+            <div style="display:flex">
+                <div class="data" id="left">Username: </div>
+                <div class="data" id="right">{{userid}}</div>
+            </div>
+            <div class="sep"></div>
+            <div style="display:flex">
+                <div class="data" id="left">Password: </div>
+                <div class="data" id="right"><button onclick="go('/change')">Change Password</button></div>
+            </div>
+            <div class="sep"></div>
+            <div style="display:flex">
+                <div class="data" id="left">Points: </div>
+                <div class="data" id="right">{{point}}</div>
+            </div>
+            <div class="sep"></div>
+            <div style="display:flex">
+                <div class="data" id="left">Survey done: </div>
+                <div class="data" id="right">{{survey_done}}</div>
+            </div>
+            <div class="sep"></div>
+            <div style="display:flex">
+                <div class="data" id="left">Survey posted:</div>
+                <div class="data" id="right">{{survey_posted}}</div>
+            </div>
+            <div class="sep"></div>
+            <div style="display:flex">
+                <div class="data" id="left">Registered since: </div>
+                <div class="data" id="right">{{age}}</div>
+            </div>
     </div>
 </body>
 {% endblock %}

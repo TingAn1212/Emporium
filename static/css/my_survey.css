@@ -10,11 +10,12 @@ body {
 
 #button_holder{
     display: flex;
-    width: 80%;
+    width: 90%;
     height: 36px;
     padding-top: 3px;
     padding-bottom: 3px;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .selector_button{
@@ -24,7 +25,7 @@ body {
     color:white;
     background-color: #406e8e;
     height: 30px;
-    width: 40%;
+    width: 50%;
 }
 
 #left{
@@ -35,6 +36,7 @@ body {
 .survey {
     display:flex; 
     width: 100%;
+    height: 80px;
     background-color: lightgrey; 
     margin-top: 0.5%;
     border-radius: 5px;
@@ -43,13 +45,17 @@ body {
 .survey_description{
     cursor: pointer;
     height: auto;
-    padding: 2%;
+    padding-left: 2%;
     width: 93%;
     display: inline-block;
     text-decoration: none; 
     color: #406eae;
     font-family: 'watery';
     font-size: larger;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 80px;
 }
 
 #popup_bg{
