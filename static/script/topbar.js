@@ -58,16 +58,10 @@ async function update_points(){
 async function pop(){
     if (poped == false){
         poped = true;
-        document.getElementById("dropdown").style.display = "block";
-        await new Promise(r => setTimeout(r, 1));
-        document.getElementById("dropdown").style.top = "50px";
-        document.getElementById("dropdown").style.opacity = 1;
+        $("#dropdown").slideDown(1000);
     }else{
         poped = false;
-        document.getElementById("dropdown").style.top = "-15px";
-        document.getElementById("dropdown").style.opacity = 0;
-        await new Promise(r => setTimeout(r, 1200));
-        document.getElementById("dropdown").style.display = "none";
+        $("#dropdown").slideUp(1000);
     }
 }
 

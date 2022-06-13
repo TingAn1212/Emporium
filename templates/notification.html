@@ -10,10 +10,10 @@
     <button id="switch" onclick="switch_mode()">UNREAD</button>
     <span id="Notifications">
         {% for noti in unseen %}
-            <label class="N{{noti[3]}}" id="N{{noti[0]}}" onclick="seen('{{noti[0]}}')"><span>{{noti[1].upper()}}</span></label>
+            <label class="N{{noti[3]}}" id="N{{noti[0]}}" onclick="seen('{{noti[0]}}')">{{noti[1].upper()}}</label>
         {% endfor %}
         {% for noti in seen %}
-            <label class="N{{noti[3]}}" id="N{{noti[0]}}"><span>{{noti[1].upper()}}</span></label>
+            <label class="N{{noti[3]}}" id="N{{noti[0]}}">{{noti[1].upper()}}</label>
         {% endfor %}
     </span>
 </body>

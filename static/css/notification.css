@@ -21,15 +21,21 @@ body {
     padding-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 99%;
-    height: auto;
+    width: calc(100% - 4px);
+    height: 40px;
     color: #406eae;
     font-family: 'watery';
     font-size: larger;
     background-color: lightgrey; 
     margin-top: 0.5%;
     border-radius: 5px;
-    border: solid black 2px;}
+    border: solid black 2px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    line-height: 40px;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
 
 .N1 {
     cursor: pointer;
@@ -37,15 +43,21 @@ body {
     padding-left: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 99%;
-    height: auto;
+    width: calc(100% - 4px);
+    height: 40px;
     color: #406eae;
     font-family: 'watery';
     font-size: larger;
     background-color: lightgrey; 
     margin-top: 0.5%;
     border-radius: 5px;
-    border: solid black 2px;}
+    border: solid black 2px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    line-height: 40px;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
 
 .N0:hover {
     background-color: rgb(168, 163, 163);
@@ -53,4 +65,12 @@ body {
 
 .N1:hover {
     background-color: rgb(168, 163, 163);
+}
+
+.N0::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.N1::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }

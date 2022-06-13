@@ -11,6 +11,7 @@ body {
 .survey {
     display:flex; 
     width: 100%;
+    height: 80px;
     background-color: lightgrey; 
     margin-top: 0.5%;
     border-radius: 5px;
@@ -19,13 +20,17 @@ body {
 .survey_description{
     cursor: pointer;
     height: auto;
-    padding: 2%;
+    padding-left: 2%;
     width: 93%;
     display: inline-block;
     text-decoration: none; 
     color: #406eae;
     font-family: 'watery';
     font-size: larger;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 80px;
 }
 
 .report_box{
@@ -119,7 +124,7 @@ body {
 #title {
     font-family: watery;
     color: white;
-    font-size: 60px;
+    font-size: calc(3vw + 30px);
     text-align: center;
     margin-bottom: 2%;
 }

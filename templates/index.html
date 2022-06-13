@@ -19,7 +19,7 @@
     <h1 id="title">EMPORIUM</h1>
     {% for survey in surveys %}
         <span class="survey">
-            <label class="survey_description" onclick="popup('{{survey[2].upper()}}','{{survey[6]}}','{{survey[4]}}','{{survey[8]|string}}','{{survey[1]}}','{{survey[0]}}')" ><span>{{survey[2].upper()}}</span></label>
+            <label class="survey_description" onclick="popup('{{survey[2].upper()}}','{{survey[6]}}','{{survey[4]}}','{{survey[8]|string}}','{{survey[1]}}','{{survey[0]}}')" >{{survey[2].upper()}}</label>
             <label class="report_box" onclick="window.open('https://docs.google.com/forms/d/1YqyF7J5xegl-ji4u-992zLjd4TmRBiX2vmkIdtAbntw/viewform','_blank');" ><img class="report_flag" src="/static/assets/flag.png"></label>
         </span>
     {% endfor %}

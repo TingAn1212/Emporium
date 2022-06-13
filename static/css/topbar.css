@@ -6,48 +6,53 @@
     position: fixed;
     top: 0;
     left:0;
+    flex-grow: 1;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 .button {
-    padding: 1%; 
-    padding-left: 3%;
-    padding-right: 3%; 
+    margin-left: 5px;
+    text-align: center;
+    line-height: 42px;
     background-color: #406e8e;
     border: 3px solid #23395b;
-    width: 10%;
-    height:auto;
+    width: 20%;
+    height:42px;
     color: #a2d6f9;
     text-decoration: none; 
     font-weight: bolder;
-    cursor: pointer;}
+    cursor: pointer;
+    font-size: calc(0.5vw + 10px);
+}
 .point_label {
-        padding: 1%; 
-        padding-left: 3%;
-        padding-right: 3%; 
-        background-color: #406e8e;
-        border: 3px solid #23395b;
-        width: 10%;
-        height:auto;
-        color: #a2d6f9;
-        text-decoration: none; 
-        font-weight: bolder;}
+    margin-left: 5px;
+    text-align: center;
+    background-color: #406e8e;
+    border: 3px solid #23395b;
+    width: 20%;
+    line-height: 42px;
+    height:42px;
+    color: #a2d6f9;
+    text-decoration: none; 
+    font-weight: bolder;
+    font-size: calc(0.5vw + 10px);
+}
 #logo {
     margin-left: 0.5%;
     width: 5%;
     height:5%;}
 
 #dropdown {
-    overflow:auto;
     background-color: beige;
     border-radius: 5px;
     border: solid black 2px;
     display: none;
     position: fixed;
-    top: -15px;
-    opacity: 0;
+    top: 50px;
     right:0px;
-    width: 8%;
+    width: 100px;
     height:auto;
-    transition: top 2s, opacity 2s; 
 }
 
 .drop {
@@ -70,4 +75,8 @@ img {
 
 .button:hover {
     background: #305976;
+}
+
+.topbar::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
