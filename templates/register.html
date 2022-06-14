@@ -8,12 +8,12 @@
 <body>
     <script src="/static/script/register.js"></script>
     <div id="container">
-        <h1 id="title">EMPORIUM</h1>
+        <h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" id="title">EMPORIUM</h1>
         <form action="{{url_for('index')}}" method="POST">
-            <input class="field" id="username" type="text" placeholder="Username:"><br>
-            <input class="field" id="password1" type="password" placeholder="Password:"><br>
-            <input class="field" id="password2" type="password" placeholder="Confirm password: "><br><br>
-            <input id="submit_button" type="button" value="Register" onclick="register()">
+            <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="field" id="username" type="text" placeholder="Username:"><br>
+            <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="field" id="password1" type="password" placeholder="Password:"><br>
+            <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="field" id="password2" type="password" placeholder="Confirm password: "><br><br>
+            <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" id="submit_button" type="button" value="Register" onclick="register()">
             <p id="hint"></p>
         </form>
     </div>

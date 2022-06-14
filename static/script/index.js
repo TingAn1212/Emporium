@@ -6,20 +6,24 @@ var survey_id = -1;
     }
     function popup(title,desc,date,response,link,id_in){
         id = id_in;
-        document.getElementById("popup_bg").style.display = "flex";
-        document.getElementById("popup_box").style.display = "initial";
+        if (mobile()){
+            $("#popup_box").css("left","0px");
+            $("#popup_box").css("width","100%");
+        }
         document.getElementById("popup_title").innerHTML = title;
         document.getElementById("popup_desc").innerHTML = desc;
         document.getElementById("popup_date").innerHTML = "Posted on: "+date;
         document.getElementById("popup_response").innerHTML = "Responded: "+response;
         document.getElementById("popup_preview").src = link;
+        $("#popup_box").fadeIn(800);
+        $("#popup_bg").fadeIn(800);
         reset_counter();
     }
     function popdown(){
         let survey_id = id;
-        document.getElementById("popup_box").style.display = "none";
-        document.getElementById("popup_bg").style.display = "none";
         document.getElementById("popup_preview").src = "/loading";
+        $("#popup_box").fadeOut(800);
+        $("#popup_bg").fadeOut(800);
         if (reload > 0){
             fetch("/fetch",{
                 headers: {

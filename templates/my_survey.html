@@ -8,8 +8,8 @@
 <body>
     <script src="/static/script/my_survey.js"></script>
     <div id="button_holder">
-        <button class="selector_button" id="left" onclick="change(0)">Posted Surveys</button>
-        <button class="selector_button" id="right" onclick="change(1)">New Survey</button>
+        <button data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="selector_button" id="left" onclick="change(0)">Posted Surveys</button>
+        <button data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="selector_button" id="right" onclick="change(1)">New Survey</button>
     </div>
     <div id="popup_bg" onclick="popdown()"></div>
     <div id="popup_box">
@@ -22,7 +22,7 @@
     </div>
     <div id="survey_holder">
         {% for survey in surveys %}
-        <span class="survey">
+        <span data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="survey">
             <label class="survey_description" onclick="popup('{{survey[2].upper()}}','{{survey[6]}}','{{survey[4]}}','{{survey[8]|string}}','{{survey[1]}}','{{survey[0]}}')" ><span>{{survey[2].upper()}}</span></label>
         </span>
         {% endfor %}

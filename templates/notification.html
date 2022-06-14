@@ -7,13 +7,13 @@
 </head>
 <body >
     <script src="/static/script/notification.js"></script>
-    <button id="switch" onclick="switch_mode()">UNREAD</button>
+    <button data-aos="fade-right" id="switch" onclick="switch_mode()">UNREAD</button>
     <span id="Notifications">
         {% for noti in unseen %}
-            <label class="N{{noti[3]}}" id="N{{noti[0]}}" onclick="seen('{{noti[0]}}')">{{noti[1].upper()}}</label>
+            <label data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="N{{noti[3]}}" id="N{{noti[0]}}" onclick="seen('{{noti[0]}}')">{{noti[1].upper()}}</label>
         {% endfor %}
         {% for noti in seen %}
-            <label class="N{{noti[3]}}" id="N{{noti[0]}}">{{noti[1].upper()}}</label>
+            <label data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="N{{noti[3]}}" id="N{{noti[0]}}">{{noti[1].upper()}}</label>
         {% endfor %}
     </span>
 </body>

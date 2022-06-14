@@ -8,14 +8,14 @@
 <body>
     <script src="/static/script/change.js"></script>
     <div id="container">
-        <h1 id="title">EMPORIUM</h1>
+        <h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" id="title">EMPORIUM</h1>
         <form action="{{url_for('change')}}" method="POST">
-            <label class="field" id="username">{{name}}</label><br><br>
-            <input class="field" id="password1" type="password" placeholder="Old password:"><br>
-            <input class="field" id="password2" type="password" placeholder="New password:"><br>
-            <input class="field" id="password3" type="password" placeholder="Confirm password:"><br><br>
+            <label data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="field" id="username">{{name}}</label><br><br>
+            <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="field" id="password1" type="password" placeholder="Old password:"><br>
+            <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="field" id="password2" type="password" placeholder="New password:"><br>
+            <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" class="field" id="password3" type="password" placeholder="Confirm password:"><br><br>
             <div style="width:60%; margin-left: 20%;">
-                <input id="submit_button" type="button" value="Change" onclick="change('{{name}}')">
+                <input data-aos="flip-down" data-aos-duration="1000" data-aos-once="true" id="submit_button" type="button" value="Change" onclick="change('{{name}}')">
             </div>
         </form>
         <p id="hint"></p>
