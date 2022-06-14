@@ -3,10 +3,6 @@
     src: url('/static/assets/watery.ttf'); /*URL to font*/
 } 
 
-body {
-    background-color:#164e9e;
-}
-
 #container {
     display:block;
     width: 60%;

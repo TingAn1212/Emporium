@@ -2,6 +2,18 @@ var poped = false;
 var userid = window.localStorage.getItem("username");
 var pw = window.localStorage.getItem("pass");
 
+async function get_points(){
+    let tem = await fetch("/fetch",{
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        method: "POST",
+        body: JSON.stringify({action:"get_points",id:userid}),
+    })
+    let response = await tem.json();
+    return response.point;
+}
+
 function login_warn(){
     window.alert("Please log in first");
 }
@@ -43,15 +55,7 @@ async function update_points(){
     })
     let response = await tem.json();
     if (response.log){
-        let tem = await fetch("/fetch",{
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            method: "POST",
-            body: JSON.stringify({action:"get_points",id:userid}),
-        })
-        let response = await tem.json();
-        document.getElementById("points").innerHTML = "Points: "+response.point;
+        document.getElementById("points").innerHTML = "Points: "+(await get_points());
     }
 }
 

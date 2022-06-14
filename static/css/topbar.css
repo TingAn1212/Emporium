@@ -1,3 +1,7 @@
+body {
+    background-color:#164e9e;
+}
+
 .topbar {
     background-color: #23395b;
     width: 100%; 
@@ -54,6 +58,7 @@
     right:0px;
     width: 100px;
     height:auto;
+    z-index: 10;
 }
 
 .drop {

@@ -68,20 +68,26 @@ async function upload(){
     let d = replace_all($("#new_desc").val(),"'",'"');
     let link = $("#new_link").val();
     if (check(link)){
-        let response = await fetch("/fetch",{
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            method: "POST",
-            body: JSON.stringify({action:"create_survey",title:t,desc:d,src:link,author:localStorage.getItem("username")})});
-        let content = await response.json();
-        if (content.state == "true"){
-            window.alert(content.reply);
-            location.reload(); 
+        if ((await get_points()) > 4){
+            let response = await fetch("/fetch",{
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                method: "POST",
+                body: JSON.stringify({action:"create_survey",title:t,desc:d,src:link,author:localStorage.getItem("username")})});
+            let content = await response.json();
+            if (content.state == "true"){
+                window.alert(content.reply);
+                location.reload(); 
+            }else{
+                $("#warning_content").html(content.reply);
+                $("#warning").css("display","flex");
+            }
         }else{
-            $("#warning_content").html(content.reply);
+            $("#warning_content").html("Not enough points")
             $("#warning").css("display","flex");
         }
+        
     }else{
         $("#warning_content").html("Invalid link")
         $("#warning").css("display","flex");
