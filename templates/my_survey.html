@@ -51,6 +51,10 @@
         </div>
         <div class="hint_holder">
             <img class="warn_img" src="/static/assets/warning.png">
+            <label class="hint">It cost 5 point uploading a survey</label>
+        </div>
+        <div class="hint_holder">
+            <img class="warn_img" src="/static/assets/warning.png">
             <label class="hint">Surveys with multiple pages can be expoited!</label>
         </div>
         <div class="hint_holder">
@@ -62,7 +66,7 @@
             <label class="hint">You can check the preview before uploading!</label>
         </div>
         <iframe id="preview" src="{{url_for('loading')}}"></iframe>
-        <button class="selector_button" onclick="refresh()" style="margin-left: 30%;">Refresh preview</button>
+        <button class="selector_button" id="refresh" onclick="refresh()">Refresh preview</button>
     </div>
 </body>
 {% endblock %}

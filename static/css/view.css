@@ -11,13 +11,14 @@ body {
 #survey_countainer{
     width: 70%;
     margin-left: 15%;
-    height: 520px;
+    height: 88vh;
 }
 
 #preview{
     width: 100%;
     height: 100%;
     background-color: black;
+    margin-left: 10px;
 }
 
 .buttons{
@@ -30,6 +31,7 @@ body {
     height: 30px;
     width: 10%;
     right: 2.5%;
+    font-size: calc(1vw + 5px);
 }
 
 #finish{
@@ -46,9 +48,10 @@ body {
     border-radius: 5px;
     color:white;
     background-color: #406e8e;
-    height: 514px;
+    height: 85vh;
     width: 14%;
     padding: 3px;
+    font-size: calc(1vw + 5px);
 }
 
 #title{
