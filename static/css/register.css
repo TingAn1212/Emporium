@@ -33,6 +33,8 @@
 }
 
 #hint {
+    position: relative;
     text-align: center;
     color: white;
+    z-index: 5;
 }

@@ -8,10 +8,12 @@ body {
 }
 
 #switch {
+    position: relative;
     width:100%;
     height:30px;
     font-weight: bolder;
     color: #406eae;
+    z-index: 5;
 }
 
 .N0 {

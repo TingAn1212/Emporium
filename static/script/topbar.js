@@ -2,6 +2,36 @@ var poped = false;
 var userid = window.localStorage.getItem("username");
 var pw = window.localStorage.getItem("pass");
 
+function get_width(){
+    return screen.width;
+}
+
+function get_height(){
+    return screen.height;
+}
+
+function random_loc(){
+    return screen.width*Math.random();
+}
+
+async function start_background(){
+    while (true){
+        await new Promise(r => setTimeout(r, 5));
+        if (Math.random() > 0.94){
+            let loc = random_loc();
+            if (Math.random() > 0.25){
+                let new_ele = $("<div class='rain_back' style='left: "+loc+"px !important"+"'></div>");
+                $("#background_holder").append(new_ele);
+                $(new_ele).animate({"top":get_height()+"px"},7000,function(){this.remove()});
+            }else{
+                let new_ele = $("<div class='rain_front' style='left: "+loc+"px !important"+"'></div>");
+                $("#background_holder").append(new_ele);
+                $(new_ele).animate({"top":get_height()+"px"},5000,function(){this.remove()});
+            }
+        }
+    }
+}
+
 async function get_points(){
     let tem = await fetch("/fetch",{
         headers: {

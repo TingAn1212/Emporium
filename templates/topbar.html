@@ -6,7 +6,7 @@
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
-    <body onload="update_points()">
+    <body onload="update_points();start_background();">
         <script src="/static/script/topbar.js"></script>
         <script src="/static/script/jquery-3.6.0.js"></script>
         <script src="/static/script/jquery.redirect.js"></script>
@@ -21,6 +21,8 @@
             <span class="point_label" id="points">Points: </span>
             <label class="button" onclick="go('/notification')" >Notification</label>
             <div onclick="pop()"><img style="width: 49px;" src="/static/assets/Logo.png"></div>
+        </div>
+        <div id="background_holder">
         </div>
         {% block content%}
         {% endblock %}

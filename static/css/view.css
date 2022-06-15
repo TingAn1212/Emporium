@@ -14,10 +14,12 @@ body {
 }
 
 #preview{
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: black;
     margin-left: 10px;
+    z-index: 5;
 }
 
 .buttons{
