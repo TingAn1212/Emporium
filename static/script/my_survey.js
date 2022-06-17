@@ -68,7 +68,7 @@ async function upload(){
     let d = replace_all($("#new_desc").val(),"'",'"');
     let link = $("#new_link").val();
     if (check(link)){
-        if ((await get_points()) > 0){
+        if ((await get_points()) > -1){
             let response = await fetch("/fetch",{
                 headers: {
                     'Content-Type': 'application/json',
