@@ -64,8 +64,9 @@ function replace_all(source,check,neww){
 }
 
 async function upload(){
-    let t = replace_all($("#new_title").val(),"'",'"');
-    let d = replace_all($("#new_desc").val(),"'",'"');
+    let t = replace_all($("#new_title").val(),"'",'`');
+    let d = replace_all($("#new_desc").val(),"'",'`');
+    d = d.replace(/(\r\n|\n|\r)/gm, "<br>");
     let link = $("#new_link").val();
     if (check(link)){
         if ((await get_points()) > -1){
