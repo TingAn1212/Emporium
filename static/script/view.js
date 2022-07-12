@@ -23,7 +23,7 @@
                     'Content-Type': 'application/json',
                 },
                 method: "POST",
-                body: JSON.stringify({action:"add_responds",id:survey_id}),
+                body: JSON.stringify({action:"add_responds",id:survey_id,user:userid}),
             })
             window.alert("Survey completed");
             reset();

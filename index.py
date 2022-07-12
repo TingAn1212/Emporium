@@ -71,6 +71,14 @@ def add_notification(connection,content,targetID):
     database.commit()
     print("Notification sent")
 
+def get_disbled(connection,user):
+    res = []
+    connection.execute("SELECT * FROM Finished WHERE UserID=%s",[user])
+    data = connection.fetchall()
+    for row in data:
+        res.append(row[1])
+    return res
+
 def update_db():
     database.commit()
 
@@ -86,10 +94,7 @@ def update_db():
 def index():
     update_db()
     with database.cursor() as connection:
-        connection.execute("SELECT * FROM Survey")
-        survey = connection.fetchall()
-        random.shuffle(survey)
-        return render_template("index.html",surveys=survey) 
+        return render_template("index.html") 
 
 @app.route("/loading")
 def loading():
@@ -219,6 +224,8 @@ def points():
                     add_notification(connection,"You got your first responder!",target)
                 elif num in alert_int:
                     add_notification(connection,"You received "+str(num)+"th responses!",target)
+                if check_login(connection,data["user"],data["password"]):
+                    connection.execute("INSERT INTO Finished VALUES (%s,%s)",[name_to_id(connection,data["user"]),data["id"]])
                 database.commit()
                 print("response added")
             return "200"
@@ -256,6 +263,23 @@ def points():
             except Exception as e:
                 print(e)
                 return dumps({"reply":str(e),"state":"false"})
+        if action == "get_recomm":
+            with database.cursor() as connection:
+                if check_login(connection,data["Sid"],data["Spw"]):
+                    disable = get_disbled(connection,name_to_id(connection,data["Sid"]))
+                    connection.execute("SELECT * FROM Survey")
+                    surveys = connection.fetchall()
+                    res = []
+                    for survey in surveys:
+                        if survey[0] not in disable:
+                            res.append(survey)
+                    random.shuffle(res)
+                    return dumps({"recomm":res})
+                else:
+                    connection.execute("SELECT * FROM Survey")
+                    surveys = connection.fetchall()
+                    random.shuffle(surveys)
+                    return dumps({"recomm":surveys})
 
 
 #code
