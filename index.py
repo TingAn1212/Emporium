@@ -216,6 +216,7 @@ def points():
         if action == "add_responds":
             with database.cursor() as connection:
                 connection.execute("UPDATE Survey SET Responders = Survey.Responders+1 WHERE SurveyID = %s",[data["id"]])
+                database.commit()
                 connection.execute("SELECT Responders FROM Survey WHERE SurveyID = %s",[data["id"]])
                 num = int(connection.fetchall()[0][0])
                 connection.execute("SELECT AuthorID FROM Survey WHERE SurveyID = %s",[data["id"]])
@@ -225,10 +226,9 @@ def points():
                 elif num in alert_int:
                     add_notification(connection,"You received "+str(num)+"th responses!",target)
                 if check_login(connection,data["user"],data["password"]):
-                    connection.execute("INSERT INTO Finished VALUES (%s,%s)",[name_to_id(connection,data["user"]),data["id"]])
+                    connection.execute("INSERT INTO Finished (UserID,SurveyID) VALUES (%s,%s)",[name_to_id(connection,data["user"],True),data["id"]])
                 database.commit()
-                print("response added")
-            return "200"
+                return "200"
         if action == "get_points":
             with database.cursor() as connection:
                 try:
