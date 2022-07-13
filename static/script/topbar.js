@@ -105,3 +105,17 @@ function logout(){
     window.alert("Logged out")
     location.href = "/home"
 }
+
+function clear_warning(){
+    $(".warn_background").css("display","none");
+    $(".warn").css("display","none");
+    $("body").css("overflow","scroll");
+}
+
+function warn_mobile(){
+    if (mobile()){
+        $("body").css("overflow","hidden");
+        $("body").append("<div class='warn_background'></div>");
+        $("body").append("<div class='warn' onclick='clear_warning()'>This website is designed for laptop browser, please use laptop for the best experience! </div>")
+    }
+}
