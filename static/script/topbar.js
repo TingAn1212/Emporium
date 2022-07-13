@@ -115,7 +115,7 @@ function clear_warning(){
 function warn_mobile(){
     if (mobile()){
         $("body").css("overflow","hidden");
-        $("body").append("<div class='warn_background'></div>");
-        $("body").append("<div class='warn' onclick='clear_warning()'>This website is designed for laptop browser, please use laptop for the best experience! </div>")
+        $("body").prepend("<div class='warn_background'></div>");
+        $("body").prepend("<div class='warn' onclick='clear_warning()'>This website is designed for laptop browser, please use laptop for the best experience! </div>")
     }
 }

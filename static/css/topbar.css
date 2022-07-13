@@ -124,20 +124,20 @@ img {
     left: 0px;
     height: 10000%;
     width: 100%;
-    z-index: 10;
+    z-index: 11;
 }
 
 .warn{
     position: absolute;
     width: 65vw;
-    height: fit-content;
+    height: 20vw;
     margin-left: 5vw;
-    margin-top: auto;
+    margin-top: 30vw;
     margin-bottom: auto;
     border-radius: 5px;
     border: solid black 5px;
     background-color: rgb(255, 255, 132);
     padding: 10%;
-    z-index: 11;
+    z-index: 12;
     text-align: center;
 }
