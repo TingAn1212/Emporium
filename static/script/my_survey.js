@@ -69,7 +69,7 @@ async function upload(){
     d = d.replace(/(\r\n|\n|\r)/gm, "<br>");
     let link = $("#new_link").val();
     if (check(link)){
-        if ((await get_points()) > -1){
+        if ((await get_points()) >= 5){
             let response = await fetch("/fetch",{
                 headers: {
                     'Content-Type': 'application/json',
