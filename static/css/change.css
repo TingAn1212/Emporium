@@ -44,4 +44,5 @@
     text-align: center;
     background-color: azure;
     border: solid black 5px;
+    text-overflow: ellipsis;
 }

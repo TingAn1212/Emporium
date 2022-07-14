@@ -79,6 +79,7 @@ body {
     font-family: watery; 
     color: lightgrey; 
     margin-bottom: 5px;
+    text-overflow: ellipsis;
 }
 
 #popup_date{
@@ -109,6 +110,7 @@ body {
     color: lightgrey; 
     margin-top: 5px; 
     margin-bottom: 0px;
+    text-overflow: ellipsis;
 }
 
 .survey:hover {
