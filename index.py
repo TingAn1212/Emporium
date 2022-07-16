@@ -5,11 +5,12 @@ import hashlib
 from datetime import date
 import random
 from json import dumps
+import os
 
 #global variable
 alert_int = (5,10,20,50,100,200,500,1000)
 app = Flask("main")
-database = sql.connect(host="sql5.freesqldatabase.com",user="sql5491224",password="fmIS8r9Qwi",database="sql5491224")
+database = sql.connect(host=os.environ.get("host"),user=os.environ.get("user"),password=os.environ.get("password"),database=os.environ.get("database"))
 
 #functions for data handling
 def get_date():
