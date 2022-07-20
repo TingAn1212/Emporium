@@ -257,6 +257,9 @@ def points():
                 with database.cursor() as connection:
                     connection.execute("SET NAMES 'utf8mb4';")
                     connection.execute("INSERT INTO Survey (SurveyLink,SurveyName,AuthorID,Dates,Info) VALUES (%s,%s,%s,%s,%s)",(data["src"],data["title"],name_to_id(connection,data["author"]),get_date(),data["desc"]))
+                    connection.execute("SELECT MAX(SurveyID) FROM Survey")
+                    max_id = connection.fetchall()[0][0]
+                    connection.execute("INSERT INTO Finished (UserID,SurveyID) VALUES (%s,%s)",(name_to_id(connection,data["author"]),max_id))
                     connection.execute("UPDATE Author SET Points=Author.Points-5 WHERE AuthorName=%s",[data["author"]])
                     add_notification(connection,"Your survey has been uploaded",name_to_id(connection,data["author"]))
                     database.commit()
