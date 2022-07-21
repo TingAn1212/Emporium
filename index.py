@@ -83,11 +83,6 @@ def get_disbled(connection,user):
 def update_db():
     database.commit()
 
-#testing page
-# @app.route("/testing")
-# def testing():
-#     return "Hello World"
-
 #pages
 @app.route("/",methods=["GET","POST"])
 @app.route("/index",methods=["GET","POST"])
