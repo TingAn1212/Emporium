@@ -7,7 +7,7 @@
 </head>
 <body>
     <script src="/static/script/deviceDetection.js"></script>
-    <script src="/static/script/index.js" onload="init();"></script>
+    <script src="/static/script/index.js" ></script>
     <script src="/static/script/topbar.js" onload="warn_mobile();"></script>
     <div id="popup_bg" onclick="popdown()"></div>
     <div id="popup_box">
@@ -18,7 +18,7 @@
         <p id="popup_desc">Placeholder</p><br>
         <button id="go_button" onclick="go_detail()">Details</button>
     </div>
-    <h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" id="title">EMPORIUM</h1>
+    <h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" id="title" onload="init();">EMPORIUM</h1>
     <!-- {% for survey in surveys %}
         <span data-aos="flip-down" data-aos-offset="60" data-aos-duration="1000" data-aos-once="true" class="survey">
             <label class="survey_description" onclick="popup('{{survey[2].upper()}}','{{survey[6]}}','{{survey[4]}}','{{survey[8]|string}}','{{survey[1]}}','{{survey[0]}}')" >{{survey[2].upper()}}</label>
