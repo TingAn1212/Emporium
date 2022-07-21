@@ -225,7 +225,7 @@ def points():
                 if num == 1:
                     add_notification(connection,"You got your first responder!",target)
                 elif num in alert_int:
-                    add_notification(connection,"You received "+str(num)+"th responses!",target)
+                    add_notification(connection,"You received your"+str(num)+"th response!",target)
                 if check_login(connection,data["user"],data["password"]):
                     connection.execute("INSERT INTO Finished (UserID,SurveyID) VALUES (%s,%s)",[name_to_id(connection,data["user"],True),data["id"]])
                 database.commit()
