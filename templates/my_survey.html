@@ -19,6 +19,8 @@
         <iframe id="popup_preview" src="{{url_for('loading')}}"></iframe>
         <p id="popup_desc">Placeholder</p><br>
         <button id="copy_button" onclick="copy()">Copy Link</button>
+        <button id="delete_button" onclick="delete_survey()">DELETE</button>
+
     </div>
     <div id="survey_holder">
         {% for survey in surveys %}

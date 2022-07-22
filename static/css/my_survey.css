@@ -137,6 +137,18 @@ body {
     margin-left: 35%;
 }
 
+#delete_button{
+    cursor: pointer;
+    border: solid black 3px;
+    border-radius: 5px;
+    color:white;
+    margin-top: 5px;
+    background-color: #ff1616;
+    height: 30px;
+    width: 30%;
+    margin-left: 35%;
+}
+
 #new_holder{
     display: none;
     position: relative;
@@ -227,4 +239,8 @@ label{
 
 #copy_button:hover {
     background: #305976;
+}
+
+#delete_button:hover {
+    background: #ca0606;
 }

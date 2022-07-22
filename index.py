@@ -1,4 +1,5 @@
 #library
+from ast import dump
 from flask import Flask, request, render_template
 import mysql.connector as sql
 import hashlib
@@ -279,6 +280,15 @@ def points():
                     surveys = connection.fetchall()
                     random.shuffle(surveys)
                     return dumps({"recomm":surveys})
+        if action == "delete_survey":
+            try:
+                with database.cursor() as connection:
+                    connection.execute("DELETE FROM Survey WHERE SurveyID=%s",[data["survey_id"]])
+                    database.commit()
+                    return dumps({"error":"None"})
+            except Exception as e:
+                return dumps({"error":str(e)})
+
 
 
 #code
