@@ -206,7 +206,7 @@ def points():
         if action == "register":
             with database.cursor() as connection:
                 connection.execute("SET NAMES 'utf8mb4';")
-                connection.execute("INSERT INTO Author (AuthorName,Passwords,Points,RegistrationDate) VALUES (%s,%s,0,%s)",(data["id"],hash(data["pw"]),get_date()))
+                connection.execute("INSERT INTO Author (AuthorName,Passwords,Points,RegistrationDate) VALUES (%s,%s,6,%s)",(data["id"],hash(data["pw"]),get_date()))
                 database.commit()
                 print("registered")
                 return "200"
