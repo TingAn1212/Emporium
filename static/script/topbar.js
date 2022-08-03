@@ -11,7 +11,7 @@ function get_height(){
 }
 
 function random_loc(){
-    return screen.width*Math.random();
+    return 100*Math.random();
 }
 
 async function start_background(){
@@ -20,13 +20,13 @@ async function start_background(){
         if (Math.random() > 0.94){
             let loc = random_loc();
             if (Math.random() > 0.25){
-                let new_ele = $("<div class='rain_back' style='left: "+loc+"px !important"+"'></div>");
+                let new_ele = $("<div class='rain_back' style='left: "+loc+"vw !important"+"'></div>");
                 $("#background_holder").append(new_ele);
-                $(new_ele).animate({"top":get_height()+"px"},7000,function(){this.remove()});
+                $(new_ele).animate({"top":"120vh"},7000,function(){this.remove()});
             }else{
-                let new_ele = $("<div class='rain_front' style='left: "+loc+"px !important"+"'></div>");
+                let new_ele = $("<div class='rain_front' style='left: "+loc+"vw !important"+"'></div>");
                 $("#background_holder").append(new_ele);
-                $(new_ele).animate({"top":get_height()+"px"},5000,function(){this.remove()});
+                $(new_ele).animate({"top":"120vh"},5000,function(){this.remove()});
             }
         }
     }

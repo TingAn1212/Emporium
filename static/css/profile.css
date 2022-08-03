@@ -3,6 +3,10 @@
     src: url('/static/assets/watery.ttf'); /*URL to font*/
 } 
 
+body {
+    padding-top:8vh;
+}
+
 #container {
     border: dotted lightgrey 3px;
     display: block;
