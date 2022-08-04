@@ -87,8 +87,8 @@ function replace_all(source,check,neww){
 async function upload(){
     let t = replace_all($("#new_title").val(),"'",'`');
     let d = replace_all($("#new_desc").val(),"'",'`');
-    t = replace_all($("#new_title").val(),'"','`');
-    d = replace_all($("#new_desc").val(),'"','`');
+    t = replace_all(t,'"','`');
+    d = replace_all(d,'"','`');
     d = d.replace(/(\r\n|\n|\r)/gm, "<br>");
     let link = $("#new_link").val();
     if (check(link)){
