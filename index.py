@@ -1,5 +1,4 @@
 #library
-from ast import dump
 from flask import Flask, request, render_template
 import mysql.connector as sql
 import hashlib
@@ -163,7 +162,10 @@ def change():
         data = request.form
         username = data["username"]
         return render_template("change.html",name=username)
-            
+
+@app.route("/about")
+def about():
+    return render_template("about.html")        
 
 @app.route("/fetch",methods=["POST"])
 def points():

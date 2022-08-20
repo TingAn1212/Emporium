@@ -1,0 +1,88 @@
+{% extends "topbar.html" %}
+{% block head %}About Us{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="/static/css/about.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div id="main">
+        <div class="title" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">EMPORIUM</div>
+        <div class="title smaller" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">ABOUT US</div>
+        <div class="block" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+            <pre class="textbox">
+    Hi, we are a group of student from River Valley High School's CID4 computing module.
+
+    Survey Emporium is a platform that allows user to trade Google Form surveys with each other for free, hence allowing students to obtain a more comprehensive set of first-hand research data.
+    
+    The vision of this platform is "By students, for students." A currency called "points" is used to let user post their survey. All service can be accesed for free.
+            </pre>
+        </div>
+        <div class="title smaller" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">HOW TO USE</div>
+        <div class="block" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+            <pre class="textbox">
+    The "Home" page is where you can help other user do their survey, each time you finish a survey, you will gain 1 point.
+
+    You can also enter "Detail" page of a specific survey to view it's information in a clearer format. You can press the "Copy Link" button to share the survey with others.
+
+    You can create an account through "Login" page from the sidebar located at the top right corner, apon registeration, you will receive 6 points to start posting!
+
+    After creating your account, head to "Survey" page to post your own survey, each survey will cost 5 points.
+            </pre>
+        </div>
+        <div class="title smaller" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">LIMITATIONS</div>
+        <div class="block" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+            <pre class="textbox">
+    There still exist some limitations:
+
+    1. Chinese and other Non-latin characters cannot be displayed properly.
+
+    2. Some special characters like " ' \ may cause error if it is in survey description or title.
+
+    3. Only google form is supported currently.
+
+    4. There is very limited support for mobile user.
+            </pre>
+        </div>
+        <div class="title smaller" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">FAQ</div>
+        <div class="block" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+            <pre class="textbox">
+    <b>How do I change my password?</b>
+        
+        The option can be found in the "Profile" page once you have logged in.
+
+    <b>What if I forget my password?</b>
+
+        You can email us at wang_ting_an@students.edu.sg for support.
+
+    <b>What to do if I see inappropriate surveys being posted?</b>
+
+        You can press the red flag at the right side of each survey to report it to us!
+
+    <b>The website doesn't work on my phone?</b>
+    
+        We are very sorry to inform you that some browser lacks support for certain important features of this website, it may not work on all mobile device...
+
+    <b>What if my survey is bugged?</b>
+
+        You can email us at wang_ting_an@students.edu.sg for support.
+            </pre>
+        </div>
+        <div class="title smaller" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">Credits</div>
+        <div class="block" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+            <pre class="textbox">
+    Created by Wang Ting An from RVHS.
+    With the help of teammate: Leong Ngai Kit and Lim Chun Hann.
+
+    Please citate us if you are using this platform for other project.
+
+    <b>This website is purely for learning purposes and do not yield any profit.</b>
+            </pre>
+        </div>
+    </div>
+    <script src="/static/script/about.js"></script>
+    <script src="/static/script/jquery-3.6.0.js"></script>
+    <script src="/static/script/jquery.redirect.js"></script>
+</body>
+{% endblock %}

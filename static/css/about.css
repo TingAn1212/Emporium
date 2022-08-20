@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'watery'; /*a name to be used later*/
+    src: url('/static/assets/watery.ttf'); /*URL to font*/
+} 
+
+body {
+    padding-top:8vh;
+}
+
+pre{
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+#main {
+    position: relative;
+    z-index: 9;
+}
+
+.title {
+    font-family: watery;
+    color: white;
+    font-size: calc(3vw + 30px);
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.block {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    width: 90vw;
+    height:fit-content;
+    border-radius: 10px;
+    border: solid black 3px;
+    background-color: lightgrey;
+    text-align: left;
+}
+
+.textbox{
+    font-size: 20px;
+}
+
+.smaller {
+    font-size: calc(3vw + 20px) !important;
+}
