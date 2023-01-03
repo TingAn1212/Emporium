@@ -6,7 +6,7 @@ from datetime import date
 import random
 from json import dumps
 import os
-
+#Redeployed on 3/1/2023
 #global variable
 alert_int = (5,10,20,50,100,200,500,1000)
 app = Flask("main")
